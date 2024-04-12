@@ -1,0 +1,19 @@
+{
+	"name": "dset_sink_race_result",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkserviceforrace_result_sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Race_result",
+				"fileSystem": "test"
+			}
+		},
+		"schema": {}
+	}
+}

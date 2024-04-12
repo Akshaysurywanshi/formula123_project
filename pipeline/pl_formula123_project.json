@@ -166,13 +166,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('act_lookup_to_read_season_data').output.value",
+						"value": "@activity('act_read_race_scheduled_API').output.value",
 						"type": "Expression"
 					},
+					"isSequential": false,
 					"batchCount": 3,
 					"activities": [
 						{
-							"name": "ingest_race_result_data",
+							"name": "Execute Pipeline1",
 							"type": "ExecutePipeline",
 							"dependsOn": [],
 							"policy": {
@@ -181,10 +182,16 @@
 							"userProperties": [],
 							"typeProperties": {
 								"pipeline": {
-									"referenceName": "pipeline1",
+									"referenceName": "pipeline2",
 									"type": "PipelineReference"
 								},
-								"waitOnCompletion": true
+								"waitOnCompletion": true,
+								"parameters": {
+									"race_list": {
+										"value": "@item().MRData.RaceTable.Races",
+										"type": "Expression"
+									}
+								}
 							}
 						}
 					]
@@ -193,10 +200,10 @@
 		],
 		"variables": {
 			"set_season": {
-				"type": "Array"
+				"type": "String"
 			},
 			"set_round": {
-				"type": "Array"
+				"type": "String"
 			}
 		},
 		"annotations": []

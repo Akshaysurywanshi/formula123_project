@@ -1,0 +1,9 @@
+{
+	"name": "project-001",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "85ec9421-1b49-493c-919b-c3a04beb0f8b",
+		"tenantId": "6b583c24-5bd0-44be-bbf2-cfff59619ba7"
+	}
+}

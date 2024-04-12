@@ -1,0 +1,66 @@
+{
+	"name": "Json2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "41eddeff-bbe4-4bc7-ad71-9d50d33a4aa4",
+				"folderPath": "output",
+				"fileSystem": "test"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"MRData": {
+					"type": "object",
+					"properties": {
+						"xmlns": {
+							"type": "string"
+						},
+						"series": {
+							"type": "string"
+						},
+						"url": {
+							"type": "string"
+						},
+						"limit": {
+							"type": "string"
+						},
+						"offset": {
+							"type": "string"
+						},
+						"total": {
+							"type": "string"
+						},
+						"SeasonTable": {
+							"type": "object",
+							"properties": {
+								"Seasons": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"season": {
+												"type": "string"
+											},
+											"url": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

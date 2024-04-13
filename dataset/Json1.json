@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "c463b968-fc0a-49a9-8c10-a8d2043d183e",
-				"folderPath": "output",
+				"fileName": "Seasons.json7961dbecd37681eb47913e63fe18dfa4219f57df7f37b994b28d86a1e9ae2313",
+				"folderPath": "Season",
 				"fileSystem": "test"
 			}
 		},

@@ -247,7 +247,7 @@
 						"parameters": {
 							"b_url": "http://ergast.com/api/f1/",
 							"relative_url": {
-								"value": "Seasons.json?limit=100",
+								"value": "seasons.json?limit=100",
 								"type": "Expression"
 							}
 						}

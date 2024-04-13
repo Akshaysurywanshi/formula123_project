@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "41eddeff-bbe4-4bc7-ad71-9d50d33a4aa4",
+				"fileName": "c463b968-fc0a-49a9-8c10-a8d2043d183e",
 				"folderPath": "output",
 				"fileSystem": "test"
 			}

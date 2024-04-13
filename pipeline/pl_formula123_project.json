@@ -43,8 +43,6 @@
 			{
 				"name": "ForEach_act_on_season",
 				"type": "ForEach",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "act_lookup_to_read_season_data",
@@ -56,10 +54,9 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Lookup1').output.value[0].MRData.SeasonTable.Seasons",
+						"value": "@activity('act_lookup_to_read_season_data').output.value[0].MRData.SeasonTable.Seasons",
 						"type": "Expression"
 					},
-					"batchCount": 3,
 					"activities": [
 						{
 							"name": "Copy data1",
@@ -209,6 +206,8 @@
 			{
 				"name": "Copy data2",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",

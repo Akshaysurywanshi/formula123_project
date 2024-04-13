@@ -5,6 +5,8 @@
 			{
 				"name": "act_lookup_to_read_season_data",
 				"type": "Lookup",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Copy data2",
@@ -43,6 +45,8 @@
 			{
 				"name": "ForEach_act_on_season",
 				"type": "ForEach",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "act_lookup_to_read_season_data",
@@ -181,6 +185,8 @@
 						{
 							"name": "Execute Pipeline1",
 							"type": "ExecutePipeline",
+							"state": "Inactive",
+							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [],
 							"policy": {
 								"secureInput": false
@@ -197,6 +203,23 @@
 										"value": "@item().MRData.RaceTable.Races",
 										"type": "Expression"
 									}
+								}
+							}
+						},
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "set_value",
+								"value": {
+									"value": "@item()",
+									"type": "Expression"
 								}
 							}
 						}
@@ -253,7 +276,13 @@
 				"outputs": [
 					{
 						"referenceName": "Json6",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"directory_nm": {
+								"value": "@concat('bronze/seasons/',string(utcNow('yyyy-MM-dd')))",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}

@@ -5,12 +5,20 @@
 			"referenceName": "AzureDataLakeStorage2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"directory_nm": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Bronze/seasons",
+				"folderPath": {
+					"value": "@dataset().directory_nm",
+					"type": "Expression"
+				},
 				"fileSystem": "test"
 			}
 		},

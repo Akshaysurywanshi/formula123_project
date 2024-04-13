@@ -2,17 +2,14 @@
 	"name": "Json1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage2",
+			"referenceName": "AzureDataLakeStorage4",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileName": "seasons.json7961dbecd37681eb47913e63fe18dfa4219f57df7f37b994b28d86a1e9ae2313",
-				"folderPath": "Bronze/seasons",
-				"fileSystem": "test"
+				"type": "AzureBlobFSLocation"
 			}
 		},
 		"schema": {

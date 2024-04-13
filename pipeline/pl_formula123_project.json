@@ -5,8 +5,6 @@
 			{
 				"name": "act_lookup_to_read_season_data",
 				"type": "Lookup",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Copy data2",
@@ -229,6 +227,8 @@
 			{
 				"name": "Copy data2",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -279,7 +279,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"directory_nm": {
-								"value": "@concat('bronze/seasons/',string(utcNow('yyyy-MM-dd')))",
+								"value": "@concat('Bronze/seasons/',string(utcNow('yyyy-MM-dd')))",
 								"type": "Expression"
 							}
 						}

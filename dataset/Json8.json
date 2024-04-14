@@ -1,0 +1,27 @@
+{
+	"name": "Json8",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage4",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"directory_nm": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().directory_nm",
+					"type": "Expression"
+				},
+				"fileSystem": "test"
+			}
+		},
+		"schema": {}
+	}
+}

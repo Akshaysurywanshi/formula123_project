@@ -60,11 +60,6 @@
 				]
 			}
 		],
-		"parameters": {
-			"directory_nm": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
